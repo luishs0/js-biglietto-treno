@@ -33,3 +33,9 @@ p {
     padding: .2rem;
     display: block;
 }
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: 80%;
+    }
+}
