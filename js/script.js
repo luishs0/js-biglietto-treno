@@ -42,10 +42,12 @@ if (age < 18) {
     sconto = "40%";
     price = price * 0.6;
 } else {
-    sconto = "0%"
-    priceWithDiscount = price
+    sconto = "0%";
+    priceWithDiscount = price;
+    document.getElementById("discountalert").innerHTML = "(Sconti disponibili soltanto per minorenni e persone over 65)";
 }
 
+//OUTPUT
 document.getElementById("discountuser").innerHTML = sconto;
 document.getElementById("finalprice").innerHTML = price + " €";
 
