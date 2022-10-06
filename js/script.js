@@ -18,7 +18,18 @@
 
 //CODICE -------------------------------------
 
+//Dati
 let km = parseInt(prompt("Quanti kilometri vuoi percorrere?")); 
 let age = parseInt(prompt("Quanti anni hai?"));
 
 console.log(km, age);
+
+document.getElementById("kmuser").innerHTML = km;
+document.getElementById("ageuser").innerHTML = age;
+
+//Prezzo iniziale 
+let price = km * 0.21;
+console.log(price);
+
+document.getElementById("firstprice").innerHTML = price + " €"
+
