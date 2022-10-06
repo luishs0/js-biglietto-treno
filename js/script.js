@@ -28,7 +28,7 @@ document.getElementById("kmuser").innerHTML = km;
 document.getElementById("ageuser").innerHTML = age;
 
 //Prezzo iniziale 
-let price = km * 0.21;
+let price = (km * 0.21).toFixed(2);
 console.log(price);
 
 document.getElementById("firstprice").innerHTML = price + " €";
@@ -37,14 +37,14 @@ document.getElementById("firstprice").innerHTML = price + " €";
 let sconto = ""
 if (age < 18) {
     sconto = "20%";
-    price = price * 0.8;
+    price = (price * 0.8).toFixed(2);
 } else if (age > 65) {
     sconto = "40%";
-    price = price * 0.6;
+    price = (price * 0.6).toFixed(2);
 } else {
     sconto = "0%";
-    priceWithDiscount = price;
-    document.getElementById("discountalert").innerHTML = "(Sconti disponibili soltanto per minorenni e persone over 65)";
+    price = price;
+    document.getElementById("discountalert").innerHTML = "Sconti disponibili soltanto per minorenni e persone over 65";
 }
 
 //OUTPUT
