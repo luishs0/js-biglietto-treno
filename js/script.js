@@ -31,5 +31,23 @@ document.getElementById("ageuser").innerHTML = age;
 let price = km * 0.21;
 console.log(price);
 
-document.getElementById("firstprice").innerHTML = price + " €"
+document.getElementById("firstprice").innerHTML = price + " €";
+
+//Sconti 
+let sconto = ""
+if (age < 18) {
+    sconto = "20%";
+    price = price * 0.8;
+} else if (age > 65) {
+    sconto = "40%";
+    price = price * 0.6;
+} else {
+    sconto = "0%"
+    priceWithDiscount = price
+}
+
+document.getElementById("discountuser").innerHTML = sconto;
+document.getElementById("finalprice").innerHTML = price + " €";
+
+
 
